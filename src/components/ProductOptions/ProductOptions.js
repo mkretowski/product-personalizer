@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const ProductOptions = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    const currentPrice = props.getPrice();
+    const currentPrice = props.getPrice;
     console.log(
       'SUMMARY:',
       '\n',
@@ -39,7 +39,7 @@ ProductOptions.propTypes = {
   title: PropTypes.string.isRequired,
   currentColor: PropTypes.string.isRequired,
   currentSize: PropTypes.string.isRequired,
-  getPrice: PropTypes.func.isRequired,
+  getPrice: PropTypes.number.isRequired,
 };
 
 export default ProductOptions;

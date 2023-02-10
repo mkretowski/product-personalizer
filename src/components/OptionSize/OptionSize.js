@@ -12,7 +12,7 @@ const OptionSize = (props) => {
               type='button'
               onClick={() => {
                 props.setCurrentSize(size.name);
-                props.setCurrentAddPrice(size.additionalPrice);
+                props.setCurrentPrice(size.additionalPrice + props.basePrice);
               }}
               className={clsx(size.name === props.currentSize && styles.active)}
             >
@@ -29,7 +29,7 @@ OptionSize.propTypes = {
   sizes: PropTypes.array.isRequired,
   currentSize: PropTypes.string.isRequired,
   setCurrentSize: PropTypes.func.isRequired,
-  setCurrentAddPrice: PropTypes.func.isRequired,
+  setCurrentPrice: PropTypes.func.isRequired,
 };
 
 export default OptionSize;
