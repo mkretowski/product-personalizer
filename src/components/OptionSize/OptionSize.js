@@ -1,6 +1,6 @@
 import styles from './OptionSize.module.scss';
 import PropTypes from 'prop-types';
-
+import clsx from 'clsx';
 const OptionSize = (props) => {
   return (
     <div className={styles.sizes}>
@@ -14,7 +14,7 @@ const OptionSize = (props) => {
                 props.setCurrentSize(size.name);
                 props.setCurrentAddPrice(size.additionalPrice);
               }}
-              className={size.name === props.currentSize && styles.active}
+              className={clsx(size.name === props.currentSize && styles.active)}
             >
               {size.name}
             </button>
